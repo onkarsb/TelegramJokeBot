@@ -6,9 +6,9 @@ from joke_module import TOKEN, JOKE_API_URL
 def start(update, context):
     # Send a welcome message
     update.message.reply_text('Welcome to Joke Bot. Send /joke to get a joke')
-    chat_id=update.effective_chat.id
-    chat_username = update.effective_chat.username
-    print(f"Start cmd\nUsername : {chat_username}\nChat Id : {chat_id}")
+    # chat_id=update.effective_chat.id
+    # chat_username = update.effective_chat.username
+    # print(f"Start cmd\nUsername : {chat_username}\nChat Id : {chat_id}")
     
 # Define the function to handle the /joke command
 def get_joke(update, context):
@@ -18,10 +18,9 @@ def get_joke(update, context):
         joke = response.text.strip()
         # Send the joke as a message to the user
         chat_id=update.effective_chat.id
-        chat_username = update.effective_chat.usernamechat_id=update.effective_chat.id
-        chat_username = update.effective_chat.username
+        # chat_username = update.effective_chat.username
         context.bot.send_message(chat_id=chat_id, text=joke)
-        print(f"Joke cmd\nUsername : {chat_username}\nChat Id : {chat_id}\nJoke: \n {joke}")
+        # print(f"Joke cmd\nUsername : {chat_username}\nChat Id : {chat_id}\nJoke: \n {joke}")
     else:
         context.bot.send_message(chat_id=update.effective_chat.id, text="Sorry, I couldn't fetch a joke at the moment. Please try again later.")
     
