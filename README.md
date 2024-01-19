@@ -16,7 +16,7 @@ python3 ./joke_bot.py
 
 ### build container
 ```bash
-docker build -t joke_bot:0.1 .
+docker build -t joke_bot:0.2 .
 ```
 
 ### run docker container
@@ -24,5 +24,5 @@ docker build -t joke_bot:0.1 .
 docker run --rm -d \
     -e TOKEN="6255139505:AAGQXZwzi4xH1KPI3UAIPwQ6OcmSvojSayE" \
     -e JOKE_API_URL="https://v2.jokeapi.dev/joke/Any?format=txt" \
-    joke_bot:0.1
+    joke_bot:0.2
 ```
